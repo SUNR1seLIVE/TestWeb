@@ -48,7 +48,7 @@ body {
   .header {
     margin-top: 65px;
     display: grid;
-    grid-template-columns: max-content max-content;
+    grid-template-columns: repeat(3, max-content) 1fr max-content;
     grid-column-gap: 60px;
 
     &-logo {
@@ -140,7 +140,7 @@ body {
       }
     }
 
-    &-social {
+    .social-network {
       background-color: greenyellow;
       grid-column: 3/4;
       grid-row: 1/2;
