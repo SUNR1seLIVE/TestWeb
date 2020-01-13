@@ -46,9 +46,9 @@ body {
   width: 1200px;
 
   .header {
-    margin-top: 65px;
+    margin: 65px 0 29px;
     display: grid;
-    grid-template-columns: repeat(3, max-content) 1fr max-content;
+    grid-template-columns: repeat(3, max-content) minmax(300px, 1fr) max-content;
     grid-column-gap: 60px;
 
     &-logo {
@@ -132,18 +132,32 @@ body {
         line-height: 14px;
         text-decoration-line: underline;
 
-        color: #C6A464;
+        color: #c6a464;
       }
 
       .text-feedback:hover {
-          color: #b68c3e;
+        color: #b68c3e;
       }
     }
 
     .social-network {
-      background-color: greenyellow;
       grid-column: 3/4;
       grid-row: 1/2;
+
+      &-whatsapp {
+        .icon-social-network {
+          margin-right: 16.1px;
+        }
+      }
+
+      &-telegramm {
+      }
+
+      &-viber {
+        .icon-social-network {
+          margin-left: 19.4px;
+        }
+      }
     }
 
     &-search {
@@ -153,9 +167,36 @@ body {
     }
 
     &-nav {
-      background-color: green;
       grid-column: 3/5;
       grid-row: 2/3;
+
+      @extend %font-Gilroy-Regular;
+      font-size: 13px;
+      color: #000000;
+
+      .nav-market {
+        float: left;
+        list-style: none;
+        margin: 0;
+      }
+      .nav-market li {
+        height: 19px;
+        margin: 27px 0 0 20px;
+        display: list-item;
+        float: left;
+        
+      }
+
+      .nav-market li:first-child {
+        margin: 27px 0 0 0;
+      }
+
+      .nav-market li a {
+        @extend %font-Gilroy-Regular;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+      }
     }
 
     &-login {
@@ -170,4 +211,18 @@ body {
       grid-row: 2/3;
     }
   }
+
+  
+}
+
+.bg-nav-menu{
+  width: 100%;
+  height: 155px;
+  background: #FAFBFC;
+}
+
+.bg-intro{
+  width: 100%;
+  height: 869px;
+  background: #2D5066;
 }
