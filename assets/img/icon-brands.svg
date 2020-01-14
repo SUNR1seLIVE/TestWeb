@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="8.202mm" height="8.202mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 820 820"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <font id="FontID0" horiz-adv-x="666" font-variant="normal" class="str1" style="fill-rule:nonzero" font-weight="400">
+	<font-face 
+		font-family="Arial">
+		<font-face-src>
+			<font-face-name name="Arial"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="T" horiz-adv-x="610" d="M259.013 0l0 631.992 -236.016 0 0 84.0214 567.014 0 0 -84.0214 -236.016 0 0 -631.992 -94.982 0z"/>
+   <glyph unicode="M" horiz-adv-x="833" d="M75.0087 0l0 716.013 141.993 0 169.322 -506.861c15.6704,-47.1566 27.009,-82.4805 34.19,-105.972 8.14048,25.9914 20.9908,64.3098 38.3184,114.81l172.346 498.023 126.817 0 0 -716.013 -90.999 0 0 598.994 -209.007 -598.994 -85.3297 0 -206.652 610.013 0 -610.013 -90.999 0z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Arial";font-variant:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .str1 {stroke-width:38.4681}
+    .str2 {stroke:black;stroke-width:13.2294}
+    .str0 {stroke:black;stroke-width:37.0382}
+    .fil0 {fill:none}
+    .fil1 {fill:black}
+    .fnt0 {font-weight:normal;font-size:343.943px;font-family:'Arial'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0 str0" cx="410" cy="410" r="392"/>
+  <g transform="matrix(0.999979 0 0 0.999979 -251.399 123.147)">
+   <text x="410" y="410"  class="fil1 str2 fnt0">T</text>
+   <text x="644" y="410"  class="fil1 str2 fnt0">M</text>
+  </g>
+ </g>
+</svg>

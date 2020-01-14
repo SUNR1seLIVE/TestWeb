@@ -42,13 +42,18 @@ body {
 }
 .container {
   margin: 0 auto;
-
-  width: 1200px;
+  padding: 0 50px;
+ background: red 50%;
+  max-width: 1300px;
 
   .header {
+    position: relative;
     margin: 65px 0 29px;
     display: grid;
-    grid-template-columns: repeat(3, max-content) minmax(300px, 1fr) max-content;
+    grid-template-columns:
+      repeat(2, max-content) minmax(70px, 100px) minmax(170px, 1fr)
+      max-content;
+    max-width: 100%;
     grid-column-gap: 60px;
 
     &-logo {
@@ -143,29 +148,19 @@ body {
     .social-network {
       grid-column: 3/4;
       grid-row: 1/2;
+      display: flex;
+      justify-content: space-between;
 
-      &-whatsapp {
-        .icon-social-network {
-          margin-right: 16.1px;
-        }
-      }
-
-      &-telegramm {
-        margin: 0;
-      }
-
+      &-whatsapp,
+      &-telegramm,
       &-viber {
         .icon-social-network {
-          margin-left: 12.4px;
+          margin: 0;
+          transition: 0.2s;
         }
-      }
-
-      .icon-social-network {
-        margin-right: 16.1px;
-        transition: 0.5s;
-      }
-      .icon-social-network:hover {
-        transform: scale(1.1, 1.1);
+        .icon-social-network:hover {
+          transform: scale(1.1, 1.1);
+        }
       }
     }
 
@@ -178,35 +173,29 @@ body {
         flex-wrap: wrap;
         align-items: stretch;
         width: 100%;
+        border: 1px solid #ced4da;
+        border-radius: 3px;
+        background: #f4f8fb;
         .input-group-prepend {
-          margin-left: -1px;
           .btn {
             display: inline-block;
             text-align: center;
             vertical-align: middle;
-            background-color: transparent;
-            border: 1px solid transparent;
-            padding: 0.375rem, 0.75rem;
-            font-size: 1rem;
-            line-height: 1.5;
-            border-radius: 3px;
-          }
-          .btn-outline-secondary {
-            color: #6c757d;
-            border-color: #6c757d;
+            background: #f4f8fb;
+            border: 0 solid transparent;
+            width: 45px;
+            height: 30px;
           }
         }
         .form-control {
           display: block;
           width: 100%;
           padding: 6px 12px;
-          font-size: 11px;          
+          font-size: 11px;
           line-height: 1.1;
           color: #495057;
-          background-color: #fff;
-          background-clip: padding-box;
-          border: 1px solid #ced4da;
-          border-radius: 3px;
+          background: #f4f8fb;
+          border: 0 solid #ced4da;
           flex: 1 1 0%;
         }
       }
@@ -215,32 +204,42 @@ body {
     &-nav {
       grid-column: 3/5;
       grid-row: 2/3;
-
+      max-width: 100%;
       @extend %font-Gilroy-Regular;
       font-size: 13px;
       color: #000000;
-
       .nav-market {
-        float: left;
+        display: flex;
+        justify-content: space-between;
         list-style: none;
         margin: 0;
-      }
-      .nav-market li {
-        height: 19px;
-        margin: 27px 0 0 20px;
-        display: list-item;
-        float: left;
-      }
 
-      .nav-market li:first-child {
-        margin: 27px 0 0 0;
-      }
+        li {
+          padding-left: 10px;
+          display: list-item;
+          margin-top: 27px;
+          height: 19px;
+          float: left;
+          a {
+            justify-content: center;
 
-      .nav-market li a {
-        @extend %font-Gilroy-Regular;
-        font-size: 13px;
-        line-height: 16px;
-        color: #000000;
+            span {
+              width: max-content;
+              align-self: flex-end;
+              @extend %font-Gilroy-Regular;
+              font-size: 13px;
+              line-height: 16px;
+              color: #000000;
+              transition: 0.2s;
+            }
+          }
+
+          a:hover {
+            span {
+              text-shadow: 5px 5px 10px #2d5066;
+            }
+          }
+        }
       }
     }
 
@@ -258,7 +257,7 @@ body {
         border: 2px solid #47708a;
         border-radius: 3px;
 
-        transition: 0.5s;
+        transition: 0.2s;
 
         .btn-text {
           @extend %font-Gilroy-bold;
@@ -298,7 +297,7 @@ body {
           height: 19px;
           background: #c6a464;
           border-radius: 50%;
-          transition: 0.5s;
+          transition: 0.2s;
 
           .fovarites-text {
             position: relative;
@@ -338,7 +337,7 @@ body {
           height: 19px;
           background: #c6a464;
           border-radius: 50%;
-          transition: 0.5s;
+          transition: 0.2s;
 
           .basket-text {
             position: relative;
@@ -369,13 +368,94 @@ body {
 }
 
 .bg-nav-menu {
+  position: relative;
   width: 100%;
   height: 155px;
   background: #fafbfc;
+  .nav {
+    max-width: 100%;
+    height: 155px;
+    &-menu {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      li {
+        position: relative;
+        display: list-item;
+        margin-top: 47px;
+        float: left;
+        a {
+          display: flex;
+          flex-wrap: wrap;
+          width: min-content;
+          height: 65px;
+          justify-content: center;
+
+          .icon-li {
+            align-self: flex-start;
+          }
+
+          .text-li {
+            width: max-content;
+            align-self: flex-end;
+            @extend %font-Gilroy-bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+          }
+        }
+        ul {
+          display: none;
+          position: absolute;
+          left: -31px;
+          top: 66px;
+          width: 110px;
+          height: max-content;
+          list-style: none;
+          background: #fafbfc;
+          box-shadow: 5px 5px 10px #000000;
+          border-radius: 5px;
+          
+          li {
+            display: flex;
+            justify-content: center;
+            float: unset;
+            margin-top: 20px;
+            a {
+              .text-li{
+                width: 105px;
+                text-align: center;
+              }
+            }
+          }
+          li:last-child{
+            margin-bottom: 20px;
+          }
+        }        
+      }
+      li:hover{
+        ul{
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 .bg-intro {
   width: 100%;
   height: 869px;
   background: #2d5066;
+}
+
+@media (max-width: 1300px) {
+
+}
+
+@media (max-width: 990px) {
+  .header{
+    grid-column-gap: 30px;
+  }
+
 }
