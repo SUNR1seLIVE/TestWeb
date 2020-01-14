@@ -43,7 +43,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 50px;
- background: red 50%;
+
   max-width: 1300px;
 
   .header {
@@ -218,7 +218,7 @@ body {
           padding-left: 10px;
           display: list-item;
           margin-top: 27px;
-          height: 19px;
+          // height: 19px;
           float: left;
           a {
             justify-content: center;
@@ -380,7 +380,7 @@ body {
       justify-content: space-between;
       list-style: none;
       margin: 0;
-      li {
+      li{
         position: relative;
         display: list-item;
         margin-top: 47px;
@@ -405,6 +405,7 @@ body {
             color: #000000;
           }
         }
+
         ul {
           display: none;
           position: absolute;
@@ -416,26 +417,32 @@ body {
           background: #fafbfc;
           box-shadow: 5px 5px 10px #000000;
           border-radius: 5px;
-          
+
           li {
             display: flex;
             justify-content: center;
             float: unset;
             margin-top: 20px;
             a {
-              .text-li{
+              .text-li {
                 width: 105px;
                 text-align: center;
               }
             }
           }
-          li:last-child{
+          li:last-child {
             margin-bottom: 20px;
           }
-        }        
+        }
       }
-      li:hover{
-        ul{
+      .li-min {
+        display: list-item;
+      }
+      .li-max {
+        display: none;
+      }
+      li:hover {
+        ul {
           display: block;
         }
       }
@@ -449,13 +456,53 @@ body {
   background: #2d5066;
 }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    .header {
+      grid-column-gap: 40px;
+    }
+  }
+}
+
+// @media screen and (max-width: 1080px) {
+//   .container {
+//     .header {
+//       &-nav {
+//         grid-column: 1/-1;
+//         grid-row: 3/4;
+//       }
+//     }
+//   }
+// }
+
+@media screen and (max-width: 990px) {
+  .container {
+    .header {
+      grid-column-gap: 10px;
+    }
+  }
+
+  .bg-nav-menu {
+    .nav {
+      &-menu {
+        .li-min {
+          display: none;
+        }
+        .li-max {
+          display: list-item;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
 
 }
 
-@media (max-width: 990px) {
-  .header{
-    grid-column-gap: 30px;
-  }
+@media screen and (max-width: 575px) {
 
 }

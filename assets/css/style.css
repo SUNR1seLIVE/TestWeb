@@ -39,7 +39,6 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 50px;
-  background: red 50%;
   max-width: 1300px;
 }
 .container .header {
@@ -211,7 +210,6 @@ body {
   padding-left: 10px;
   display: list-item;
   margin-top: 27px;
-  height: 19px;
   float: left;
 }
 .container .header-nav .nav-market li a {
@@ -466,6 +464,12 @@ body {
 .bg-nav-menu .nav-menu li ul li:last-child {
   margin-bottom: 20px;
 }
+.bg-nav-menu .nav-menu .li-min {
+  display: list-item;
+}
+.bg-nav-menu .nav-menu .li-max {
+  display: none;
+}
 .bg-nav-menu .nav-menu li:hover ul {
   display: block;
 }
@@ -476,8 +480,20 @@ body {
   background: #2d5066;
 }
 
-@media (max-width: 990px) {
-  .header {
-    grid-column-gap: 30px;
+@media screen and (max-width: 1140px) {
+  .container .header {
+    grid-column-gap: 40px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .container .header {
+    grid-column-gap: 10px;
+  }
+
+  .bg-nav-menu .nav-menu .li-min {
+    display: none;
+  }
+  .bg-nav-menu .nav-menu .li-max {
+    display: list-item;
   }
 }
