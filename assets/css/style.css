@@ -431,7 +431,35 @@ body {
   line-height: 17px;
   color: #000000;
 }
-.bg-nav-menu .nav-menu li:hover ul {
+.bg-nav-menu .nav-menu .base-li .li-container {
+  display: none;
+  position: absolute;
+  left: -31px;
+  top: 66px;
+  width: 110px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  list-style: none;
+  background: #fafbfc;
+  -webkit-box-shadow: 5px 5px 10px #000000;
+          box-shadow: 5px 5px 10px #000000;
+  border-radius: 5px;
+}
+.bg-nav-menu .nav-menu .base-li .li-container li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: unset;
+  margin-top: 20px;
+}
+.bg-nav-menu .nav-menu .base-li .li-container li:last-child {
+  margin-bottom: 20px;
+}
+.bg-nav-menu .nav-menu .base-li:hover ul {
   display: block;
 }
 .bg-nav-menu .nav .test {
