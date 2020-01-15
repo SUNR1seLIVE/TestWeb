@@ -410,9 +410,9 @@ body {
         .li-container {
           display: none;
           position: absolute;
-          left: -31px;
+          right: -45px;
           top: 66px;
-          width: 110px;
+          width: min-content;
           height: max-content;
           list-style: none;
           background: #fafbfc;
@@ -422,8 +422,8 @@ body {
           li {
             display: flex;
             justify-content: center;
-            float: unset;
-            margin-top: 20px;
+            float: left;
+            margin: 20px 10px 0 10px;
           }
           li:last-child {
             margin-bottom: 20px;
@@ -433,7 +433,7 @@ body {
 
       .base-li:hover {
         ul {
-          display: block;
+          display: flex;
         }
       }
     }
@@ -471,11 +471,39 @@ body {
     }
   }
 
-  
+  .bg-nav-menu {
+    .nav {
+      &-menu {
+        .base-li {
+          .li-container {
+            li {
+              margin: 20px 2.5px 0 2.5px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 770px) {
 }
 
 @media screen and (max-width: 575px) {
+  .container {
+    margin: 0 auto;
+    padding: 0 30px;
+
+    max-width: 515px;
+    .header {
+      position: relative;
+      margin: 65px 0 29px;
+      display: grid;
+      grid-template-columns:
+        repeat(2, max-content) minmax(70px, 100px) minmax(170px, 1fr)
+        max-content;
+      max-width: 100%;
+      grid-column-gap: 60px;
+    }
+  }
 }
