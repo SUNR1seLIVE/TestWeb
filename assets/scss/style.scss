@@ -471,18 +471,7 @@ body {
     }
   }
 
-  .bg-nav-menu {
-    .nav {
-      &-menu {
-        .li-min {
-          display: none;
-        }
-        .li-max {
-          display: list-item;
-        }
-      }
-    }
-  }
+  
 }
 
 @media screen and (max-width: 770px) {
